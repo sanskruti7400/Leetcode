@@ -22,3 +22,28 @@ class Solution {
         return result;
     }
 }
+//wihtout hashmap 
+
+class Solution {
+    public List<Integer> majorityElement(int[] nums) {
+        List<Integer> res = new ArrayList<>();
+        if(nums.length==1){
+            res.add(nums[0]);
+            return res;
+        }
+        for(int i=0;i<nums.length;i++){
+            int len=1;
+            for(int j=i+1;j<nums.length;j++){
+                if(nums[i]==nums[j]){
+                    len++;
+                }
+            }
+            if(nums.length/3<len){
+                if(!res.contains(nums[i])){
+                    res.add(nums[i]);
+                }
+            }
+        }
+        return res;
+    }
+}
