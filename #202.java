@@ -7,7 +7,7 @@ class Solution {
             n=square(n);
         }
         return n==1;
-    }
+    } 
     public int square(int n){
         int num=n,sum=0;
         while(n>0){
